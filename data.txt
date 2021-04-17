@@ -3,6 +3,7 @@ setbody 1 body1.png
 setbg bg1.png 
 show face1.png 尤利乌斯:emm 
 show face2.png 尤利乌斯:emmm 
+aside zhe 
 setbody 1 body2.png  
 show face3.png 保罗:e 
 show face4.png 保罗:em 

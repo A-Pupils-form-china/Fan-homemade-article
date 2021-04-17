@@ -129,6 +129,7 @@ class reader:
             self.text.delete('1.0', 'end')
             self.text.insert(0.0, self.context)
             self.text.insert(0.0, self.name + ':')
+            self.cfaceis = TRUE
             self.count += 1
         if temp[0] == 'change':
             self.body1 = ImageTk.PhotoImage(self.resize(Image.open(temp[1])))
@@ -136,5 +137,9 @@ class reader:
             self.cbody1 = self.cbody1 = self.canvas1.create_image(350, 350, image=self.body1)
             self.count += 1
             self.resume()
-
+        if temp[0] == 'aside':
+            if self.cfaceis == TRUE:
+                self.canvas2.delete(self.cface)
+            self.text.delete('1.0', 'end')
+            self.text.insert(0.0, temp[1])
         self.root.update()
